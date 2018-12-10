@@ -1,0 +1,8 @@
+
+# ignore these projects
+portfolio/
+mail/
+.data/
+resume/
+schoolwork/
+form/
