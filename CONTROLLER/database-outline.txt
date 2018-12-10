@@ -1,0 +1,35 @@
+Re-design portfolio site.
+Develop por
+
+
+==resume
+position
+co name
+start date
+end date
+duties
+
+
+==SITES
+thumbnail image
+project name
+startdate
+enddate
+
+
+==APPS
+thumbnail image
+project name
+startdate
+enddate
+
+
+==ABOUT
+thumbnail image
+project name
+startdate
+enddate
+
+CONTACT
+
+FOOTER

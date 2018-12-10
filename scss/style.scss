@@ -1,0 +1,747 @@
+///////////////////////////////
+///  NEW PORTFOLIO DESIGN   ///
+//////////////////////////////
+
+
+
+///////////////////////
+///  SCSS MIXINS   ///
+//////////////////////
+
+
+
+
+
+/////////////////////////
+//CONSTRUCTION LINES  ///
+////////////////////////
+$con1:  1px solid #ff0000;
+$con2:  1px solid #008000;
+
+
+/////////////////////
+// CUSTOM FONTS   ///
+////////////////////
+@font-face {
+  font-family: Aardvark Cafe;
+  src: url('../font/AARDVARK_CAFE__.TTF');
+}
+
+@mixin primary-font {
+  font-family: 'Aardvark Cafe',sans-serif;
+  font-weight: bold;
+}
+
+
+////////////////////////
+///     COLORS       ///
+///////////////////////
+
+///Primary Color
+///////////////
+$primary: #006699;
+
+///Secondary Color
+/////////////////////
+$secondary: #009966;
+
+///Tertiary Color
+//////////////////
+$tertiary: #fff;
+
+
+
+
+
+/////////////////
+///   RESET   ///
+/////////////////
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+////////////////////////
+///   PAGE SETUP    ///
+//////////////////////
+body{
+  margin: 0;
+  height: auto;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+  background: #000;
+}
+
+
+
+/////////////////////////
+///   VIDEO SECTION   ///
+////////////////////////
+#video {
+  background-color: black;
+  //border: $con1;
+  width: 100vw;
+  height: 80vh;
+  margin: 10% 0 0 0;
+  padding: 0;
+  display: flex;
+
+}
+
+
+/// HEADER
+///////////////
+
+header{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0,0,0,0.7);
+  margin: 0;
+  padding: 0;
+  font-family: custom-font;
+  z-index: 2;
+  position: relative;
+
+  #branding{
+    height: 100%;
+    width: 20%;
+
+    p{
+      color: $primary;
+      font-size: 2rem;
+      padding: 1%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+
+
+/// NAV
+///////////
+
+nav {
+  float: right;
+  //border: 1px dashed green; //tracer
+  width: 50%;
+  height: 100%;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      //border: 1px  solid $primary;
+      margin: 0 auto;
+      width: 15%;
+      padding: .4rem;
+      font-size: 1.4rem;
+
+
+
+
+    }
+
+    a {
+      color: $secondary;
+      text-decoration: none;
+      margin: 0 auto;
+
+      //link-status
+      &:hover {
+        color: $tertiary;
+      }
+    }
+
+  }
+}
+
+
+
+///////////////////////////////
+///     VIDEO BACKGROUND    ///
+///////////////////////////////
+
+#video{
+  height: 70vh;
+  width: 100%;
+
+
+  .v-header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: $tertiary;
+
+    .fullscreen-video-wrap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+
+  .container{
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+.fullscreen-video-wrap video{
+  min-width: 100%;
+  min-height: 100%;
+}
+.header-overlay{
+  height: 20vh;
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 100%;
+  background: #225470;
+  z-index: 1;
+  opacity: 0.95; //transparency
+  color: $tertiary;
+
+
+  .header-content{
+    z-index: 2; //sets header text above everything
+
+    .header-content h1{
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+
+    .header-content p{
+      font-size: 1.5rem;
+      display: block;
+      padding-bottom: 2rem;
+      color: $tertiary;
+    }
+
+    .btn{
+      background: #34b3a0;
+      color: $tertiary;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        border: 1px solid #008000;
+        width: 28%;
+        height: 8%;
+        color: #008000;
+      }
+    }
+  }
+}
+
+.section{
+  padding: 20px 0;
+}
+.section-b{
+  background: #333;
+  color: $tertiary;
+}
+
+
+    //////////////////////////
+    ///   SITES SECTION   ///
+    /////////////////////////
+
+
+
+
+/// SITE SECTION
+//////////////////
+
+.site-section {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: $tertiary;
+
+  h1 {
+    text-align: center;
+    //border: 1px solid blue;
+    color: $secondary;
+    height: 15vh;
+    font-size: 3rem;
+  }
+  hr{
+    width: 20%;
+    margin: 0 auto 1% auto;
+  }
+}
+
+/// SITE PREVIEW WINDOW
+//////////////////////////
+
+.site-view-window {
+  //border: 1px dashed white;
+  width: 70vw;
+  height: 80vh;
+
+  .site-image-preview {
+    width: 80%;
+    height: 50%;
+    margin: 0 7%;
+    padding: 1rem;
+
+
+    color: $primary;
+    background: blue;
+  }
+
+  .site-preview-name {
+    font-size: 2rem;
+    text-align: center;
+    color: $secondary;
+
+  }
+  hr  {
+    width: 60%;
+    margin: 0 auto;
+  }
+  p  {
+    text-indent: initial;
+    font-size: 90%;
+    margin: 1.2rem;
+
+  }
+
+
+  .btn-check-it-out {
+    border: 1px solid #000fff;
+    border-radius: 10% 10%;
+    color: #000fff;
+    padding: 1rem;
+    width: 15%;
+    height: 3%;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: 1px solid #008000;
+      width: 28%;
+      height: 8%;
+      color: #008000;
+    }
+  }
+
+  .btn-more-apps {
+    border: 1px solid #000fff;
+    border-radius: 10% 10%;
+    color: #000fff;
+    padding: 1rem;
+    width: 15%;
+    height: 3%;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: 1px solid #008000;
+      width: 28%;
+      height: 8%;
+      color: #008000;
+    }
+  }
+}
+
+/// SITE DRAWER
+/////////////////////
+
+.site-drawer {
+  //border: 1px dashed red;
+  width: 24vw;
+  margin-right: 4%;
+  float: right;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.site-thumb-container {
+  width: 95%;
+  height: 30vh;
+  //border: 1px dashed yellow;
+  margin: 0 auto;
+
+
+  .site-thumbnail {
+    color: white;
+    background: green;
+    width: 100%;
+    height: 82%;
+
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: $primary;
+  }
+}
+
+
+  ////////////////////////
+  ///  APP SECTION    ///
+  ///////////////////////
+
+
+
+//app SECTION
+.app-section {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: $tertiary;
+
+  h1 {
+    text-align: center;
+    //border: 1px solid blue;
+    height: 15vh;
+    font-size: 4rem;
+    color: $secondary;
+    text-transform: uppercase;
+  }
+
+  hr{
+    width: 25%;
+    margin: 0 auto 1% auto;
+
+  }
+}
+
+//app PREVIEW WINDOW
+.app-view-window {
+  //border: 1px dashed white;
+  width: 70vw;
+  height: 80vh;
+  float: right;
+
+  .app-image-preview {
+    width: 80%;
+    height: 50%;
+    margin: 0 7%;
+    padding: 1rem;
+
+
+    color: $secondary;
+    background: blue;
+  }
+
+  .app-preview-name {
+    font-size: 2rem;
+    text-align: center;
+    color: $secondary;
+  }
+  hr  {
+    width: 60%;
+    margin: 0 auto;
+  }
+  p  {
+    text-indent: initial;
+    font-size: 90%;
+    margin: 1.2rem;
+
+  }
+
+  .btn-container{
+    //border: 1px dotted red;
+    height: 10%;
+    width: 26%;
+    margin: 1rem auto;
+    padding: auto;
+
+
+  }
+
+  .btn-check-it-out {
+    border: 1px solid #000fff;
+    border-radius: 10% 10%;
+    color: #000fff;
+    padding: 1rem;
+    width: 15%;
+    height: 3%;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: 1px solid #008000;
+      width: 28%;
+      height: 8%;
+      color: #008000;
+    }
+  }
+
+  .btn-more-apps {
+    border: 1px solid #000fff;
+    border-radius: 10% 10%;
+    color: #000fff;
+    padding: 1rem;
+    width: 15%;
+    height: 3%;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: 1px solid #008000;
+      width: 28%;
+      height: 8%;
+      color: #008000;
+    }
+  }
+}
+
+//app DRAWER
+/////////////
+.app-drawer {
+  //border: 1px dashed red;
+  width: 20vw;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.app-thumb-container {
+  width: 65%;
+  height: 75vh;
+  //border: 1px dashed yellow;
+  margin: 0 auto;
+
+
+  .app-thumbnail {
+    color: $tertiary;
+    background: green;
+    width: 100%;
+    height: 82%;
+
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: $primary;
+  }
+}
+
+
+
+/////////////////////////////
+///     ABOUT  SECTION    ///
+////////////////////////////
+
+#about{
+  height: 100vh;
+  width: 100%;
+  background: black;
+  //border: 1px dashed orange;
+
+
+
+  h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $secondary;
+    text-transform: uppercase;
+  }
+  hr{
+    width: 12%;
+    margin: 0 auto;
+  }
+  //PORTFOLIO-SELFIE
+  .portfolio-image-box{
+    background: url("../imgs/image-holder.png");
+    height: 50%;
+    width: 25vw;
+    margin: 2%;
+    //border: 1px dashed green;
+
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //about para div
+  .about-para-box{
+    //border: 1px dotted red;
+    float: right;
+    height: 60%;
+    width: 40vw;
+    margin: 2%;
+    margin: 2%;
+    text-indent: 5%;
+    color: $tertiary;
+
+    p{
+      color: $tertiary;
+    }
+  }
+
+  //SKILLS BOX
+  #skills{
+    //border: 1px dashed $primary;
+    width: 45vw;
+    height: 33%;
+    margin-left: 2%;
+    margin-top: 0;
+
+
+    h2{
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    hr{
+      width: 28%;
+      color: rgba(255, 255, 255, 1);
+      margin: 0 auto;
+    }
+    //Programming Languages
+    .skill-box{
+      //border: 1px dotted yellow;
+      width: 9%;
+      height: 17vh;
+      margin-left: 1%;
+
+      p{
+        color: $tertiary;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .vial{
+        background: rgba(0, 128, 0, .5);
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        border: 1px solid $tertiary;
+        border-bottom-left-radius: 25% 25%;
+        border-bottom-right-radius: 25% 25%;
+      }
+
+      //TODO ADD AN animation for liquids going up and down
+      // TODO ADD bubbles going up and down
+
+      //Skill Icon
+      .skill-icon{
+        width:100%;
+        height: 30%;
+        margin-bottom: 0;
+        //border: 1px solid red;
+      }
+    }
+    .float{
+      float:right;
+    }
+  }
+
+}
+
+
+
+/////////////////////////////
+///   CONTACT SECTION    ///
+////////////////////////////
+#contact{
+  height: 100vh;
+  width: 100vw;
+
+  h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: $primary;
+  }
+  hr{
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  form{
+    border: 4px solid $secondary;
+    border-radius: 5% 5%;
+
+    width: 50%;
+    height: 50vh;
+    margin: 2rem auto;
+
+    fieldset{
+
+      border-top-left-radius: 5% 5%;
+      border-top-right-radius: 5% 5%;
+    }
+
+    //CONTACT FORM INPUTS
+    input{
+      background: #808;
+    }
+    textarea{
+      width: 49.5vw;
+      height: 32vh;
+      background: grey;
+      color: $primary;
+      font-size: 2rem;
+    }
+  }
+
+
+
+}
+
+
+
+/////////////////////////////
+///   FOOTER SECTION     ///
+////////////////////////////
+footer{
+  height: 100vh;
+  width: 100%;
+
+
+
+
+
+}
+
+
+
+/// VIEWPORT
+//////////////
+
+@media(max-width: 960px){
+
+  /// VIDEO BACKGROUND
+  ///////////////////
+  .container{
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+
+
+
+}
